@@ -198,6 +198,13 @@ edit INDEX [--name=NAME] [--phone=PHONE_NUMBER] [--email=EMAIL] [--address=ADDRE
 * Use `--notes=` with no value to clear notes.
 * Linkline rejects edits that would make the client duplicate another existing client.
 
+<box type="tip" seamless>
+
+**Note on editing clients on filtered lists:** If you edit a client while viewing a filtered list (e.g., after using
+`find` or `filtertag`), the client may disappear from the displayed list if the edited details no longer match the
+current filter criteria. Use `list` to see all clients again.
+</box>
+
 Examples:
 
 * `edit 1 --phone=91234567 --email=johndoe@example.com`
