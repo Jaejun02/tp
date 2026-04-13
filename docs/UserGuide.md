@@ -626,10 +626,11 @@ previous Linkline home folder.
    primary screen, the GUI may open off-screen. Delete `preferences.json` before starting Linkline again.
 2. **If you minimize the Help Window** and then run `help` again, the original Help Window remains minimized and no new
    Help Window appears. Restore the minimized Help Window manually.
-3. **Selection highlight may shift to another client after editing**. When you edit a client so that it no longer matches
-   the current filter (e.g., after using `find`), the client disappears from the list and the details panel clears.
-   However, the selection highlight may shift to another client in the filtered list instead of disappearing completely.
-   This does not affect command correctness.
+3. **Selection highlight is cosmetic and has no function**: It does not update the details panel – only `view INDEX`
+   does. Clicking on the displayed list does nothing. The highlight may shift unexpectedly after commands like
+   `edit`, `add`, or `list`, but this is harmless. For example, after editing a client out of a filtered list,
+   the highlight may move to another client, but this does not affect which client is shown in the details panel or
+   the correctness of the command.
 
 --------------------------------------------------------------------------------------------------------------------
 
