@@ -113,9 +113,14 @@ The following constraints apply whenever these field values are entered in comma
   separated only by hyphens, if any.
 * `ADDRESS`: Must not be blank.
 * `TAG`: 1 to 50 characters. Must not be blank.
-* `NOTES`: 0 to 200 characters.
+* `NOTES`: 0 to 500 characters.
 * `LOG_MESSAGE`: 1 to 1000 characters. Must contain at least one non-space character.
 
+</box>
+
+<box type="tip" seamless>
+
+**Note on character counting:** For free-text fields such as `NOTES` and `LOG_MESSAGE`, character limits are measured internally using Unicode code points. In most cases, this matches what users would visually perceive and naturally count as characters, though some combined symbols may count differently.
 </box>
 
 <box type="tip" seamless>
@@ -279,7 +284,7 @@ Example result after a `list` command:
 
 ### Viewing client details: `view`
 
-Shows the specified client's full details in the right-hand panel.
+Shows the specified client's full details in the right-hand panel (including full client name, tags, phone number, email address...).
 
 Format:
 
@@ -303,6 +308,8 @@ Examples:
 
 * `view 1`
 * `find --name=Alex` followed by `view 1`
+
+**Note:** Clicking on client in list will only change the highlight position, to see details of a client or before making any information modification, please use `view` command.
 
 ### Finding clients by details: `find`
 
